@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/demo.css">
+</head>
+<body>
+    <section class="forms">
+        <form class="login">
+            <h2>登录</h2>
+            <input type="text" placeholder="请输入用户名" />
+            <input type="password" placeholder="请输入密码" />
+            <input type="button" value="登 录">
+            <div class="reg">
+                <a href="javascript:;">没有账号？立即注册</a>
+                <a href="javascript:;">忘记密码？</a>
+            </div>
+        </form>
+
+        <form class="register">
+            <h2>注册</h2>
+            <input type="text" placeholder="请输入用户名" />
+            <input type="password" placeholder="请输入密码" />
+            <input type="email" placeholder="请输入注册邮箱"/>
+            <input type="button" value="注 册">
+            <div class="reg">
+                <a href="javascript:;">已账号？立即登录</a>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        document.querySelectorAll('.forms .reg a').forEach(function(item) {
+            item.addEventListener('click', function() {
+                document.querySelector('.forms').classList.toggle('active');
+            })
+        })
+    </script>
+</body>
+</html>
