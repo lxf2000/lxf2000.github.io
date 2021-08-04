@@ -1,0 +1,317 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #ade5f5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.cloud-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.cloud-1 {
+    top: 10vh;
+    animation: animation-1 32s linear infinite;
+    transform: scale(0.65);
+}
+
+.cloud-2 {
+    top: 40vh;
+    animation: animation-2 37s linear infinite;
+    transform: scale(0.5);
+}
+
+.cloud-3 {
+    top: 20vh;
+    animation: animation-3 45s linear infinite;
+    transform: scale(0.5);
+}
+
+.cloud-4 {
+    top: 40vh;
+    animation: animation-4 50s linear infinite;
+    transform: scale(0.4);
+}
+
+.cloud-5 {
+    top: 65vh;
+    animation: animation-5 55s linear infinite;
+    transform: scale(0.55);
+}
+
+.cloud-6 {
+    top: 35vh;
+    animation: animation-6 60s linear infinite;
+    transform: scale(0.45);
+}
+
+.cloud-7 {
+    bottom: 10vh;
+    animation: animation-7 65s linear infinite;
+    transform: scale(0.5);
+}
+
+.cloud-block {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.cloud {
+    position: relative;
+    width: 350px;
+    height: 120px;
+    background: #fff;
+    border-radius: 70px;
+    box-shadow: 0 16px 16px rgba(0, 0, 0, .08);
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.cloud::before {
+    right: 50px;
+    top: -90px;
+    width: 180px;
+    height: 180px;
+}
+
+.cloud::after {
+    left: 50px;
+    top: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.sun-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -85px 0 0 -85px;
+}
+
+.sun {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: #fcc952;
+    z-index: 2;
+}
+
+.face {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -40px;
+}
+
+.eyes-box {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 20px;
+}
+
+.eyes-left,
+.eyes-right {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.eyes-left::before,
+.eyes-right::before {
+    content: '';
+    display: block;
+    margin-top: 4px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    /* alternate 反向 */
+    animation: eyes 3s ease-in-out alternate infinite;
+}
+
+.mouth {
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    animation: mouth 3s linear infinite;
+}
+
+.tongue {
+    bottom: -6px;
+    width: 100%;
+    height: 10px;
+    border-radius: 50%;
+    background: #f54b2e;
+    animation: tongue 3s linear infinite;
+}
+
+span {
+    display: inline-block;
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: #f8a037;
+}
+
+span:nth-child(2) {
+    transform: rotate(30deg);
+}
+
+span:nth-child(3) {
+    transform: rotate(60deg);
+}
+
+/* animation 动画 */
+@keyframes animation-1 {
+    0% {
+        left: 90%;
+    }
+    10% {
+        left: 110%;
+    }
+    10.001% {
+        left: -10%;
+    }
+    100% {
+        left: 90%;
+    }
+}
+
+ @keyframes animation-2 {
+    0% {
+        left: 75%;
+    }
+    25% {
+        left: 110%;
+    }
+    25.001% {
+        left: -10%;
+    }
+    100% {
+        left: 75%;
+    }
+}
+
+ @keyframes animation-3 {
+    0% {
+        left: 60%;
+    }
+    40% {
+        left: 110%;
+    }
+    40.001% {
+        left: -10%;
+    }
+    100% {
+        left: 60%;
+    }
+}
+
+@keyframes animation-4 {
+    0% {
+        left: 45%;
+    }
+    55% {
+        left: 110%;
+    }
+    55.001% {
+        left: -10%;
+    }
+    100% {
+        left: 45%;
+    }
+}
+
+@keyframes animation-5 {
+    0% {
+        left: 30%;
+    }
+    70% {
+        left: 110%;
+    }
+    70.001% {
+        left: -10%;
+    }
+    100% {
+        left: 30%;
+    }
+}
+
+@keyframes animation-6 {
+    0% {
+        left: 10%;
+    }
+    90% {
+        left: 110%;
+    }
+    90.001% {
+        left: -10%;
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes animation-7 {
+    0% {
+        left: -10%;
+    }
+    99.99% {
+        left: 110%;
+    }
+    100% {
+        left: -10%;
+    }
+}
+
+/* 口 */
+@keyframes mouth {
+    0% {
+        height: 14px;
+    }
+    100% {
+        height: 18px;
+    }
+}
+
+/* 舌头 */
+@keyframes tongue {
+    0% {
+        height: 13px;
+    }
+    100% {
+        height: 18px;
+    }
+}
+/* 眼睛 */
+@keyframes eyes {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(11px);
+    }
+}
