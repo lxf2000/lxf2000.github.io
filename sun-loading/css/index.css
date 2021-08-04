@@ -1,0 +1,123 @@
+body {
+    background: #f4c042;
+}
+
+.wrapper {
+    position: relative;
+    margin: 260px auto 0;
+    width: 306px;
+    height: 300px;
+    background: url('../images/1.png') no-repeat bottom;
+}
+
+.box {
+    position: relative;
+    left: 50%;
+    top: 135px;
+    margin-left: -68px;
+    width: 136px;
+    height: 136px;
+    animation: box 3s infinite linear;
+    z-index: -1;
+}
+
+.sun {
+    width: 100%;
+    height: 100%;
+    background: url('../images/sun.png') no-repeat;
+    animation: sun 3s infinite linear;
+}
+
+.eyes {
+    position: absolute;
+    left: 25%;
+    bottom: 50%;
+    width: 22px;
+    height: 6px;
+    background: url('../images/eye.png') no-repeat;
+    animation: eyes 3s infinite linear;
+}
+
+p {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -70px;
+    font-size: 30px;
+    font-family: Verdana;
+    color: rgba(0, 0, 0, .5);
+    animation: wen 3s linear infinite;
+}
+
+/* 动画 */
+@keyframes box {
+    0% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(0);
+    }
+    45% {
+        transform: translateY(-45px);
+    }
+    70% {
+        transform: translateY(-45px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    80% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes eyes {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(0px) scale(1, 1);
+    }
+    55% {
+        transform: translateX(0px) scale(1, 0.1);
+    }
+    60% {
+        transform: translateX(0px) scale(1);
+    }
+    70% {
+        transform: translateX(45px);
+    }
+    100% {
+        transform: translateX(45px);
+    }
+}
+
+@keyframes wen {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
