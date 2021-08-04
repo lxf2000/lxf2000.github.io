@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="running"></div>
+    <style>
+        .running {
+            margin: 50px auto;
+            width: 180px;
+            height: 300px;
+            background: url('./images/sprites.png');
+            animation: rush 1s infinite;
+            animation-timing-function: steps(7);
+        }
+
+        @keyframes rush {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: -1260px;
+            }
+        }
+    </style>
+
+
+    <div class="walking"></div>
+    <style>
+        .walking {
+            margin: 50px auto;
+            width: 200px;
+            height: 312px;
+            background: url('./images/walkingdead.png');
+            animation: zombies 1s infinite;
+            animation-timing-function: steps(10);
+        }
+
+        @keyframes zombies {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: -2000px;
+            }
+        }
+    </style>
+
+
+    <div class="action"></div>
+    <style>
+        .action {
+            margin: 50px auto;
+            width: 76.5px;
+            height: 81px;
+            background: url('./images/sprites-IORI.jpg');
+            animation: actions 1s infinite;
+            animation-timing-function: steps(27);
+        }
+
+        @keyframes actions {
+            0% {
+                background-position-x: 0;
+            }
+            100% {
+                background-position-x: -1989px;
+            }
+        }
+    </style>
+</body>
+</html>
