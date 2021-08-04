@@ -1,3 +1,3 @@
-### 仓库地址：https://lxf2000.github.io/case.github.io
+### 仓库地址：https://lxf2000.github.io
 
 ### github 地址：https://github.com/lxf2000
