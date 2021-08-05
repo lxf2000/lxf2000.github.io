@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>仓库首页</title>
     <style>
+        html, body, h1, div {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper h1 {
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
         #wrapper .links {
             box-sizing: border-box;
             display: flex;
+            justify-content: space-between;
+            margin: 30px auto 0;
             padding: 20px;
-            width: 100%;
+            width: 1000px;
         }
         #wrapper .links a {
             text-decoration: none;
-            margin: 0 5px;
             padding: 5px 10px;
             text-align: center;
             color: #000;
@@ -32,6 +44,7 @@
 </head>
 <body>
     <div id="wrapper">
+        <h1>仓库</h1>
         <div class="links">
             <a href="https://lxf2000.github.io/case.github.io/rotate-img" target="_blank">hover 动画</a>
             <a href="https://lxf2000.github.io/case.github.io/coherent" target="_blank">精灵图动画</a>
