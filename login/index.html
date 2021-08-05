@@ -33,9 +33,12 @@
     </section>
 
     <script>
-        document.querySelectorAll('.forms .reg a').forEach(function(item) {
+        let a = document.querySelectorAll('.reg a');
+        let forms = document.querySelector('.forms');
+        
+        a.forEach(function(item) {
             item.addEventListener('click', function() {
-                document.querySelector('.forms').classList.toggle('active');
+                forms.classList.toggle('active');
             })
         })
     </script>
