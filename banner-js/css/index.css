@@ -1,0 +1,94 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#wrapper {
+    position: relative;
+    margin: 100px auto 0;
+    width: 900px;
+    height: 540px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 图片 */
+.list {
+    width: 100%;
+    height: 100%;
+}
+
+.list li {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.list .active {
+    display: block;
+}
+
+.list li img {
+    width: 100%;
+}
+
+/* 箭头 */
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    transition: all .6s ease-in-out;
+    opacity: 0;
+}
+
+.arrow-left {
+    left: 0;
+    background: rgba(0, 0, 0, .4) url('../images/arrow-left.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.arrow-right {
+    right: 0;
+    background: rgba(0, 0, 0, .4) url('../images/arrow-right.png') no-repeat center;
+    background-size: 100%;
+}
+
+#wrapper:hover .arrow-left,
+#wrapper:hover .arrow-right {
+    margin-top: -25px;
+    transition: all .6s ease-in-out;
+    opacity: 1;
+}
+
+/* 小圆点 */
+.dot {
+    position: absolute;
+    right: 15%;
+    bottom: 50px;
+}
+.dot li {
+    box-sizing: border-box;
+    float: left;
+    margin-left: 5px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.dot li.current {
+    background: orange;
+}
